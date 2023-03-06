@@ -1,18 +1,30 @@
+function Player(name, symbol) {
+  this.name = name;
+  this.symbol = symbol;
+}
+
+const you = new Player('Branko', 'x');
+
+const computer = new Player('Computer', 'o');
+
 const board = ['', '', '', '', '', '', '', '', ''];
 
-const gameBoard = (() => {
-  const move = (a) => board[a] = 'x';
+const yourMove = (() => {
+  const move = (a) => board[a] = you.symbol;
   return { move };
 })();
 
-console.log(gameBoard.move('2'));
-console.log(gameBoard.move(0));
-console.log(board);
-
-/* const calculator = (() => {
-  const add = (a, b) => a + b;
-  return { add };
+const compMove = (() => {
+  const move = (a) => board[a] = computer.symbol;
+  return { move };
 })();
 
-console.log(calculator.add(1, 2));
- */
+const gameFlow = (() => {
+  while 
+
+})();
+
+
+yourMove.move(3);
+compMove.move(2);
+console.log(board);
